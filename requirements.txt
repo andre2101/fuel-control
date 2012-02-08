@@ -6,7 +6,7 @@ PyYAML==3.09
 django-model-utils
 django-extensions==0.6      ## runscript
 django-annoying==0.7.6      ## @render_to, etc
-
+bpython
 
 #tests
 #model-mommy==0.6.2
