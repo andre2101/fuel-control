@@ -2,6 +2,7 @@
 /* ! Layout for desktop version   */
 /* ============================== */
 
+/* index */
 	body {
 		background: #49809B url('../images/fundo.jpg');
 	}
@@ -69,6 +70,12 @@
 		border-radius: 10px 10px 10px 10px;
 		border: none;
 		box-shadow: 0 3px 2px 1px #161616;
+	}
+
+/* result */
+
+	.result h3 {
+		margin: 0;
 	}
 
 /* ============================= */
