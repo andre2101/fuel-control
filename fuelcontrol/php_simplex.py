@@ -1,7 +1,8 @@
 #coding: utf-8
+import re
+from decimal import Decimal
 from splinter.browser import Browser
 from BeautifulSoup import BeautifulSoup
-
 
 def get_fuel(preco_alcool, preco_gasolina, 
 			 consumo_alcool, consumo_gasolina, kilometragem, tanque):
@@ -13,7 +14,13 @@ def get_fuel(preco_alcool, preco_gasolina,
 	browser.click_link_by_partial_href('solucion2.php')
 	html = BeautifulSoup(browser.html)
 	text = html.findAll('p')[2].getText()
-	return text
+	rgx = re.compile('\\d+\\.\\d+')
+	results = rgx.findall(text)
+	return {
+		'custo_total': 	Decimal(results[0]),
+		'vol_alcool': 	Decimal(results[1]),
+		'vol_gasolina':	Decimal(results[2]),	}
+
 
 params = {
 	'preco_alcool': 1.87,
@@ -23,5 +30,4 @@ params = {
 	'kilometragem': 650,
 	'tanque': 50,
 }
-
 print get_fuel(**params)

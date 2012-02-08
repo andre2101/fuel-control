@@ -8,6 +8,8 @@ django-extensions==0.6      ## runscript
 django-annoying==0.7.6      ## @render_to, etc
 bpython
 
+boto==2.0
+-e hg+https://bitbucket.org/tomwys/django-storages#egg=django-storages-dev
 
 splinter
 zope.testbrowser
