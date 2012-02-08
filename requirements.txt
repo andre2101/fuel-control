@@ -8,6 +8,12 @@ django-extensions==0.6      ## runscript
 django-annoying==0.7.6      ## @render_to, etc
 bpython
 
+
+splinter
+zope.testbrowser
+
+BeautifulSoup==3.2.0
+
 #tests
 #model-mommy==0.6.2
 #django-nose==0.1.3
