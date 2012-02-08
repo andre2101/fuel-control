@@ -6,15 +6,42 @@
 		background: #49809B url('../images/fundo.jpg');
 	}
 
-	.center {
-		margin: 0 auto;
-	}
-
 	h1 {
 		background: url('../images/fuelcontrol.png') no-repeat;
+		margin: 50px auto 80px;
 		width: 448px; height: 185px;
 	}
+
+	.row {
+		text-align: center;
+	}
+
+	h2 {
+		color: #FFFFFF;
+		margin: 0 0 70px; 
+	}
+
+	h3 {
+		color: #FFC167;
+		margin: 0 0 35px;
+	}
+
+	label {
+		color: #FFFFFF;
+		display: block;
+	}
+
+	select {
+		margin: 0 0 70px;
+	}
+
+	input[type="text"] {
+		margin: 0 0 70px;
+	}
 	
+	input[type="submit"] {
+		background: orange;
+	}
 
 /* ============================= */
 /* ! Layout for mobile version   */

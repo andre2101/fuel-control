@@ -25,20 +25,55 @@
 </head>
 <body class="container">
 
-	<div class="row">
-		<header class="twelvecol last">
-			<h1 class="ir center">Fuel Control</h1>
-			<h2 class="center">O que é melhor colocar? Gasolina ou Álcool?</h2>
-		</header>
-	</div> 
-
-	<div class="row">
-		<div id="main" role="main" class="twelvecol last">
-
+	<header class="row">
+		<div class="twelvecol last">
+			<h1 class="ir">Fuel Control</h1>
+			<h2>O que é melhor colocar? Gasolina ou Álcool?</h2>
 		</div>
-		<footer>
+	</header>
 
-		</footer>
+	<div class="row">
+		<div class="twelvecol last">
+			<h3>Escolha o modelo exato do seu automóvel:</h3>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="sixcol">
+			<label for="marca">Marca do Carro</label>
+			<select name="marca">
+				<option value="volkswagen">Volkswagen</option>
+			</select>
+		</div>
+		<div class="sixcol last">
+			<label for="modelo">Modelo do Carro</label>
+			<select name="modelo">
+				<option value="voyage">Voyage</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="twelvecol last">
+			<h3>Insira o valor da gasolina e do álcool na sua cidade:</h3>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="sixcol">
+			<label for="gasolina">Valor da Gasolina</label>
+			<input type="text" name="gasolina" />
+		</div>
+		<div class="sixcol last">
+			<label for="alcool">Valor do Álcool</label>
+			<input type="text" name="alcool" />
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="twelvecol last">
+			<input type="submit" value="Calcular" />
+		</div>
 	</div>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
