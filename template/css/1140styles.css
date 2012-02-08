@@ -45,7 +45,7 @@
 		border-radius: 10px 10px 10px 10px;
 	}
 
-	h2, h3, label {
+	h2, h3, label, td {
 		text-shadow: 0 2px 6px #3B3B3B;
 	}
 
@@ -82,17 +82,8 @@
 		padding: 10px;
 
 	}
-	
-	input[type="submit"] {
-		color: white;
-		margin: 0 0 50px;
-		width: 285px;
-		height: 82px;
-		line-height: 80px;
-		text-align: center;
-		font-size: 30px;
-		text-shadow: 0px 3px 5px black;
-		border: none;
+
+	input[type="submit"], a.button {
 		box-shadow: 0 3px 6px 1px #161616;
 
 		background: #ff9d1a; /* Old browsers */
@@ -104,12 +95,54 @@
 		background: linear-gradient(top, #ff9d1a 0%,#ff740a 100%); /* W3C */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9d1a', endColorstr='#ff740a',GradientType=0 ); /* IE6-9 */
 	}
+	
+	input[type="submit"] {
+		color: white;
+		margin: 0 0 50px;
+		width: 285px;
+		height: 82px;
+		line-height: 80px;
+		text-align: center;
+		font-size: 30px;
+		text-shadow: 0px 3px 5px black;
+		border: none;
+	}
 
 /* result */
 
 	.result h3 {
 		margin: 0;
 	}
+
+	table { 
+		color: #FFC167;
+		font-size: 20px;
+		text-align: left;
+	}
+
+	td {
+		padding-bottom: 10px;
+	}
+
+	td:first-child {
+		color: #FFFFFF;
+		width: 190px;
+	}
+
+	a.button {
+		border: none;
+		color: white;
+		display: inline-block;
+		font-family: 'MyriadWebProBold';
+		font-size: 20px;
+		line-height: 60px;
+		margin: 25px 0 50px;
+		width: 215px; height: 55px;
+		text-align: center;
+		text-decoration: none;
+		text-shadow: 0px 3px 5px black;
+	}
+
 
 /* ============================= */
 /* ! Layout for mobile version   */
