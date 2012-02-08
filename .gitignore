@@ -1,2 +1,6 @@
 .project
 .pydevproject
+*.pyc
+*.sqlite
+*.db
+.DS_Store
