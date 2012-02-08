@@ -10,5 +10,5 @@ class Fuel(models.Model):
 class FuelUsage(models.Model):
     "Represents the usage of some kind of fuel"
     fuel = models.ForeignKey(Fuel)
-    urban = DecimalField(u"Consumo em Ambiente Urbano",max_digits=10, decimal_places=2)
-    road = DecimalField(u"Consumo em Ambiente De Estrada",max_digits=10, decimal_places=2)
+    urban = models.DecimalField(u"Consumo em Ambiente Urbano",max_digits=10, decimal_places=2)
+    road = models.DecimalField(u"Consumo em Ambiente De Estrada",max_digits=10, decimal_places=2)
