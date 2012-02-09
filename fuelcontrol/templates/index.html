@@ -50,15 +50,17 @@
 		<div class="threecol">
 			<label for="marca">Marca do Carro</label>
 			<select name="marca" class="radius">
-				<option value="volkswagen">Volkswagen</option>
-				<option value="fiat">Fiat</option>
+				{% for marca in marcas %}
+					<option value="{{marca.name}}">{{marca.name}}</option>
+				{% endfor %}
 			</select>
 		</div>
 		<div class="threecol">
 			<label for="modelo">Modelo do Carro</label>
 			<select name="modelo" class="radius">
-				<option value="voyage">Voyage</option>
-				<option value="gol">Gol</option>
+				{% for carro in carros %}
+					<option value="{{carro.id}}">{{carro.name}}</option>
+				{% endfor %}
 			</select>
 		</div>
 		<div class="threecol last">
