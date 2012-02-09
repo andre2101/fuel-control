@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
 	<link rel="stylesheet" href="{{ STATIC_URL }}css/1140styles.css">
 	<script src="{{ STATIC_URL }}js/libs/modernizr-2.0.6.min.js"></script>
+
 </head>
 <body class="container">
 
@@ -49,9 +50,9 @@
 		</div>
 		<div class="threecol">
 			<label for="marca">Marca do Carro</label>
-			<select name="marca" class="radius">
+			<select id="select-marca" name="marca" class="radius">
 				{% for marca in marcas %}
-					<option value="{{marca.name}}">{{marca.name}}</option>
+					<option value="{{marca.name}}" {% if request.GET.fabricante == marca.name %}selected{%endif%} >{{marca.name}}</option>
 				{% endfor %}
 			</select>
 		</div>
@@ -97,5 +98,15 @@
 	{% include "footer.html" %}
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+
+
+	<script>
+	$(document).ready(function () {
+		$('#select-marca').change(function() {
+			window.location.href = '/?fabricante=' + $(this).val();
+			});
+		});
+	</script>
+
 </body><!--! end of #container -->
 </html>
