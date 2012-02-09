@@ -16,19 +16,18 @@
 	<!-- 1140px Grid styles for IE -->
 	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]-->
 
-
-	<link rel="stylesheet" href="static/css/style.css">
-	<link rel="stylesheet" href="static/css/1140.css">
-	<link rel="stylesheet" href="static/css/style.css">
-	<link rel="stylesheet" href="static/css/1140styles.css">
-	<script src="static/js/libs/modernizr-2.0.6.min.js"></script>
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/1140.css">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/1140styles.css">
+	<script src="{{ STATIC_URL }}js/libs/modernizr-2.0.6.min.js"></script>
 </head>
 <body class="container">
 
 	<header class="row">
 		<div class="fourcol"></div>
 		<div class="fourcol">
-			<a href="/"><img class="h1" src="static/images/fuelcontrol.png" alt="FuelControl" /></a>
+			<a href="/"><img class="h1" src="{{ STATIC_URL }}images/fuelcontrol.png" alt="FuelControl" /></a>
 		</div>
 		<div class="fourcol last"></div>
 	</header>
@@ -44,7 +43,7 @@
 			<h3>Escolha o modelo exato do seu automóvel:</h3>
 		</div>
 	</div>
-
+	<form method="POST" action="/">
 	<div class="row">
 		<div class="threecol">
 		</div>
@@ -86,14 +85,14 @@
 		<div class="threecol last">
 		</div>
 	</div>
-
+ {% csrf_token %}
 	<div class="row">
 		<div class="twelvecol last">
 			<input type="submit" class="radius" value="Calcular" />
 		</div>
 	</div>
-
+	</form>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+	<script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/libs/jquery-1.6.2.min.js"><\/script>')</script>
 </body><!--! end of #container -->
 </html>
