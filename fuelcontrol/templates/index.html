@@ -55,11 +55,11 @@
 		</div>
 		<div class="threecol">
 			<label for="gasolina">Valor da Gasolina</label>
-			<input type="text" class="radius" name="gasolina" size="5" value="2.61" />
+			<input type="text" class="radius" name="gasolina" id="txt-gasolina" size="5" value="2.61" />
 		</div>
 		<div class="threecol">
 			<label for="alcool">Valor do Álcool</label>
-			<input type="text" class="radius" name="alcool" size="5" value="1.87"  />
+			<input type="text" class="radius" name="alcool" id="txt-alcool" size="5" value="1.87"  />
 		</div>
 		<div class="threecol last">
 		</div>
@@ -75,10 +75,14 @@
 	{% include "footer.html" %}
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+	<script src="//raw.github.com/plentz/jquery-maskmoney/master/jquery.maskMoney.js" type="text/javascript"></script>
 
 
 	<script>
 	$(document).ready(function () {
+		$('#txt-gasolina').maskMoney({decimal:'.', thousands:''});
+		$('#txt-alcool').maskMoney({decimal:'.', thousands:''});
+
 		$('#select-marca').change(function() {
 			window.location.href = '/?fabricante=' + $(this).val();
 			});
