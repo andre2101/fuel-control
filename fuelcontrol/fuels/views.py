@@ -15,12 +15,20 @@ def index(request):
 		preco_gasolina = float(request.POST.get('gasolina'))	
 		
 		modelo = request.POST.get('modelo')	
-		print modelo
 		modelo = Car.objects.get(pk=modelo)
-		print modelo
 		tanque = 50
 		urbano = get_fuel(preco_alcool, preco_gasolina, modelo.alc_urban, modelo.gas_urban, 325, tanque)
 		rodoviario = get_fuel(preco_alcool, preco_gasolina, modelo.alc_road, modelo.gas_road, 650, tanque)
+		print urbano
 		print rodoviario
+		URBANO = {
+			'km_alc': modelo.alc_urban * tanque,
+			'total_alc': preco_alcool * tanque,
+			
+			'km_gas': modelo.gas_urban * tanque,
+			'total_gas': preco_gasolina * tanque,
+
+		}
+
 		TEMPLATE='results.html'
 	return locals()
