@@ -22,7 +22,9 @@ def get_fuel(preco_alcool, preco_gasolina,
 	
 	if text.count('X1 = 0'):
 		print 'X1=0'
-		rgx = re.compile('\\d+\\.\\d+')
+		#rgx = re.compile('\\d+\\.\\d+')
+		rgx = re.compile('\\d+\\.*\\d*')
+
 		results = rgx.findall(text)
 		return {
 			'custo_total': 	Decimal(results[0]),
