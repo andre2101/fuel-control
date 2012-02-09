@@ -73,8 +73,8 @@
 				{% endif %}{% endif %}
 			</div>
 
-			<h3>Você economiza no mínimo</h3>
-			<p class="price">R$ 23,00</p>
+		<h3>Você economiza a cada 10KM:</h3>
+			<p class="price">R$ {{URBANO.econ_10k|floatformat:2}}</p>
 		</div>
 		<div class="fourcol box radius">
 			<div class="motorway">
@@ -102,8 +102,8 @@
 					<p>{{rodoviario.vol_alcool}} litros de álcool</p>
 				{% endif %}{% endif %}			</div>
 
-			<h3>Você economiza no mínimo</h3>
-			<p class="price">R$ 23,00</p>
+			<h3>Você economiza a cada 10KM:</h3>
+			<p class="price">R$ {{RODOVIARIO.econ_10k|floatformat:2}}</p>
 		</div>
 		<div class="twocol last"></div>
 	</div>
