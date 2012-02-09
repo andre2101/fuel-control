@@ -15,13 +15,38 @@ def get_fuel(preco_alcool, preco_gasolina,
 	browser.click_link_by_partial_href('solucion2.php')
 	html = BeautifulSoup(browser.html)
 	text = html.findAll('p')[2].getText()
-	#rgx = re.compile('\\d+\\.\\d+')
-	rgx = re.compile('\\d+\\.*\\d*')
-	results = rgx.findall(text)
-	return {
-		'custo_total': 	Decimal(results[0]),
-		'vol_alcool': 	Decimal(results[1]),
-		'vol_gasolina':	Decimal(results[2]),	}
+	
+	#rgx = re.compile('\\d+\\.*\\d*')
+	#rgx = re.compile('\\d+(?:\\.\\d*)*')
+	#results = rgx.findall(text)
+	
+	if text.count('X1 = 0'):
+		rgx = re.compile('\\d+\\.\\d+')
+		results = rgx.findall(text)
+		return {
+			'custo_total': 	Decimal(results[0]),
+			'vol_alcool': 	0,
+			'vol_gasolina':	Decimal(results[1]),}
+
+	elif text.count('X2 = 0'):
+		rgx = re.compile('\\d+\\.\\d+')
+		results = rgx.findall(text)
+		return {
+			'custo_total': 	Decimal(results[0]),
+			'vol_alcool': 	Decimal(results[1]),
+			'vol_gasolina':	0}
+
+	else:
+		rgx = re.compile('\\d+\\.\\d+')
+		results = rgx.findall(text)
+		return {
+			'custo_total': 	Decimal(results[0]),
+			'vol_alcool': 	Decimal(results[1]),
+			'vol_gasolina':	Decimal(results[2]),}
+
+
+
+
 
 
 params = {
