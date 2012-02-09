@@ -21,19 +21,33 @@ def index(request):
 		urbano = get_fuel(preco_alcool, preco_gasolina, modelo.alc_urban, modelo.gas_urban, 325, tanque)
 		rodoviario = get_fuel(preco_alcool, preco_gasolina, modelo.alc_road, modelo.gas_road, 650, tanque)
 
+
+		p_urb = [urbano['custo_total'], 325*preco_gasolina, 325*preco_alcool]
+		p_rod = [rodoviario['custo_total'], 650*preco_gasolina, 650*preco_alcool]
+
+		p_urb.sort()
+		p_rod.sort()
+		
+		econ_urb = Decimal(p_urb[-1]) - Decimal(p_urb[0])
+		econ_rod = Decimal(p_rod[-1]) - Decimal(p_rod[0])
+		
 		URBANO = {
 			'km_alc': modelo.alc_urban * tanque,
 			'total_alc': preco_alcool * tanque,
 			
 			'km_gas': modelo.gas_urban * tanque,
-			'total_gas': preco_gasolina * tanque,}
+			'total_gas': preco_gasolina * tanque,
+			'econ_10k': econ_urb/Decimal('32.5'),
+			}
 
 		RODOVIARIO = {
 			'km_alc': modelo.alc_road * tanque,
 			'total_alc': preco_alcool * tanque,
 			
 			'km_gas': modelo.gas_road * tanque,
-			'total_gas': preco_gasolina * tanque,}
+			'total_gas': preco_gasolina * tanque,
+			'econ_10k': econ_urb/65,
+			}
 
 		TEMPLATE='results.html'
 	return locals()
