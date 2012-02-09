@@ -6,7 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'fuelcontrol.views.home', name='home'),
+	url(r'^$', 'fuels.views.index', name='index'),
     # url(r'^fuelcontrol/', include('fuelcontrol.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
