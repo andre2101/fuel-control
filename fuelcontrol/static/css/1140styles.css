@@ -30,7 +30,7 @@
 
 /* index */
 	body {
-		background: #49809B url('../images/fundo.jpg');
+		background: #49809B url('../images/bg.jpg');
 	}
 
 	.h1 {
@@ -45,7 +45,7 @@
 		border-radius: 10px 10px 10px 10px;
 	}
 
-	h2, h3, label, td {
+	h2, h3, label, td, p {
 		text-shadow: 0 2px 6px #3B3B3B;
 	}
 
@@ -112,9 +112,8 @@
 	}
 
 /* result */
-
-	.result h3 {
-		margin: 0;
+	.result h2 {
+		text-align: left;
 	}
 
 	table { 
@@ -144,6 +143,67 @@
 		text-align: center;
 		text-decoration: none;
 		text-shadow: 0px 3px 5px black;
+	}
+
+	.box {
+		margin-top: 25px;
+		margin-bottom: 50px;
+		padding: 25px;
+		text-align: left;
+		width: 90%;
+
+		/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjIiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjIiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+		background: -moz-linear-gradient(top, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.2) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.2)), color-stop(100%,rgba(0,0,0,0.2))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.2) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.2) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.2) 100%); /* IE10+ */
+		background: linear-gradient(top, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.2) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33000000', endColorstr='#33000000',GradientType=0 ); /* IE6-8 */
+	}
+
+	.fourcol.box {
+		width: 26%; /* hack para centralizar com o padding dos boxes */
+	}
+
+	.result h3 {
+		color: #FFFFFF;
+		margin: 25px 0 0;
+	}
+
+	.result .motorway h3, .result .urban h3 {
+		margin: 0;
+	}
+
+	.result p {
+		color: #FFC167;
+		font-size: 16px;
+	}
+
+	.result .cost-benefit h3 {
+		font-family: 'MyriadWebProBold';
+	}
+
+	.result .cost-benefit p {
+		font-size: 20px;
+	}
+
+	.result p.price {
+		font-size: 30px;
+	}
+
+	.motorway, .urban {
+		padding: 0 0 0 57px;
+		border-bottom: 2px dotted #FFFFFF;
+	}
+
+	.motorway {
+		background: url('../images/motorway.png') no-repeat;
+	}
+
+	.urban {
+		background: url('../images/urban.png') no-repeat;
 	}
 
 
