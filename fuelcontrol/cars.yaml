@@ -1,0 +1,289 @@
+- fields: {app_label: cars, model: car, name: car}
+  model: contenttypes.contenttype
+  pk: 10
+- fields: {app_label: cars, model: carmaker, name: car maker}
+  model: contenttypes.contenttype
+  pk: 9
+- fields: {app_label: contenttypes, model: contenttype, name: content type}
+  model: contenttypes.contenttype
+  pk: 5
+- fields: {app_label: auth, model: group, name: group}
+  model: contenttypes.contenttype
+  pk: 2
+- fields: {app_label: admin, model: logentry, name: log entry}
+  model: contenttypes.contenttype
+  pk: 8
+- fields: {app_label: auth, model: message, name: message}
+  model: contenttypes.contenttype
+  pk: 4
+- fields: {app_label: auth, model: permission, name: permission}
+  model: contenttypes.contenttype
+  pk: 1
+- fields: {app_label: sessions, model: session, name: session}
+  model: contenttypes.contenttype
+  pk: 6
+- fields: {app_label: sites, model: site, name: site}
+  model: contenttypes.contenttype
+  pk: 7
+- fields: {app_label: auth, model: user, name: user}
+  model: contenttypes.contenttype
+  pk: 3
+- fields: {domain: example.com, name: example.com}
+  model: sites.site
+  pk: 1
+- fields: {name: Fiat}
+  model: cars.carmaker
+  pk: 1
+- fields: {name: Ford}
+  model: cars.carmaker
+  pk: 2
+- fields: {name: Chevrolet}
+  model: cars.carmaker
+  pk: 3
+- fields: {name: Volkswagen}
+  model: cars.carmaker
+  pk: 4
+- fields: {name: Honda}
+  model: cars.carmaker
+  pk: 5
+- fields: {name: Peugeot}
+  model: cars.carmaker
+  pk: 6
+- fields: {name: Renault}
+  model: cars.carmaker
+  pk: 7
+- fields: {name: Toyota}
+  model: cars.carmaker
+  pk: 8
+- fields: {alc_road: '9.4', alc_urban: '8.3', car_maker: 1, gas_road: '14.5', gas_urban: '12.3',
+    name: Novo Uno 1.0}
+  model: cars.car
+  pk: 1
+- fields: {alc_road: '8.2', alc_urban: '7.1', car_maker: 1, gas_road: '13.2', gas_urban: '10.7',
+    name: Novo Uno 1.4}
+  model: cars.car
+  pk: 2
+- fields: {alc_road: '10.7', alc_urban: '8.9', car_maker: 1, gas_road: '15.6', gas_urban: '12.7',
+    name: Mille Fire Economy 1.0}
+  model: cars.car
+  pk: 3
+- fields: {alc_road: '8.2', alc_urban: '7.1', car_maker: 1, gas_road: '12.1', gas_urban: '10.4',
+    name: 'Novo Palio '}
+  model: cars.car
+  pk: 4
+- fields: {alc_road: '9.7', alc_urban: '7.9', car_maker: 1, gas_road: '14.8', gas_urban: '12.2',
+    name: Palio Fire Economy 1.0}
+  model: cars.car
+  pk: 5
+- fields: {alc_road: '9.8', alc_urban: '8.2', car_maker: 1, gas_road: '14.1', gas_urban: '12',
+    name: Siena Fire 1.0}
+  model: cars.car
+  pk: 6
+- fields: {alc_road: '8', alc_urban: '7.3', car_maker: 1, gas_road: '12', gas_urban: '10.7',
+    name: Siena 1.4}
+  model: cars.car
+  pk: 7
+- fields: {alc_road: '8.2', alc_urban: '7.3', car_maker: 1, gas_road: '12', gas_urban: '10.6',
+    name: Strada Fire 1.4}
+  model: cars.car
+  pk: 8
+- fields: {alc_road: '9.2', alc_urban: '8.1', car_maker: 2, gas_road: '13.5', gas_urban: '11.6',
+    name: Ka 1.0}
+  model: cars.car
+  pk: 9
+- fields: {alc_road: '8.4', alc_urban: '7.1', car_maker: 2, gas_road: '12.4', gas_urban: '9.7',
+    name: Fiesta Rocam 1.6}
+  model: cars.car
+  pk: 10
+- fields: {alc_road: '9.3', alc_urban: '7.5', car_maker: 2, gas_road: '13.9', gas_urban: '11',
+    name: New Fiesta 1.6}
+  model: cars.car
+  pk: 11
+- fields: {alc_road: '8.5', alc_urban: '6.4', car_maker: 2, gas_road: '11.8', gas_urban: '9.4',
+    name: Focus 1.6}
+  model: cars.car
+  pk: 12
+- fields: {alc_road: '7.8', alc_urban: '6.1', car_maker: 2, gas_road: '11.6', gas_urban: '9',
+    name: Focus 2.0}
+  model: cars.car
+  pk: 13
+- fields: {alc_road: '6.3', alc_urban: '5.3', car_maker: 2, gas_road: '9.2', gas_urban: '7.9',
+    name: EcoSport 2.0}
+  model: cars.car
+  pk: 14
+- fields: {alc_road: '8.4', alc_urban: '7', car_maker: 2, gas_road: '12.1', gas_urban: '9.7',
+    name: Courier 1.6}
+  model: cars.car
+  pk: 15
+- fields: {alc_road: '9.7', alc_urban: '6.7', car_maker: 3, gas_road: '13.4', gas_urban: '8.3',
+    name: Celta 1.0}
+  model: cars.car
+  pk: 16
+- fields: {alc_road: '7.8', alc_urban: '5.9', car_maker: 3, gas_road: '11.3', gas_urban: '8.2',
+    name: Vectra 2.0}
+  model: cars.car
+  pk: 17
+- fields: {alc_road: '9.7', alc_urban: '5.7', car_maker: 3, gas_road: '14.3', gas_urban: '7.6',
+    name: Prisma 1.4}
+  model: cars.car
+  pk: 18
+- fields: {alc_road: '8.6', alc_urban: '7.4', car_maker: 4, gas_road: '12.3', gas_urban: '10.5',
+    name: Gol G4 1.0}
+  model: cars.car
+  pk: 19
+- fields: {alc_road: '9.8', alc_urban: '8.4', car_maker: 4, gas_road: '14.1', gas_urban: '12',
+    name: Gol Ecomotion 1.0}
+  model: cars.car
+  pk: 20
+- fields: {alc_road: '9.4', alc_urban: '7.1', car_maker: 4, gas_road: '13.7', gas_urban: '10.4',
+    name: Gol Rallye 1.6}
+  model: cars.car
+  pk: 21
+- fields: {alc_road: '10.5', alc_urban: '7.4', car_maker: 4, gas_road: '15', gas_urban: '10.7',
+    name: Polo BlueMotion 1.6}
+  model: cars.car
+  pk: 22
+- fields: {alc_road: '9.5', alc_urban: '7.4', car_maker: 4, gas_road: '14.1', gas_urban: '10.8',
+    name: Voyage 1.0}
+  model: cars.car
+  pk: 23
+- fields: {alc_road: '9.4', alc_urban: '7.1', car_maker: 4, gas_road: '13.7', gas_urban: '10.4',
+    name: Voyage 1.6}
+  model: cars.car
+  pk: 24
+- fields: {alc_road: '8.5', alc_urban: '7.3', car_maker: 4, gas_road: '12.3', gas_urban: '10.7',
+    name: Saveiro 1.6}
+  model: cars.car
+  pk: 25
+- fields: {alc_road: '8.7', alc_urban: '7.6', car_maker: 5, gas_road: '13.2', gas_urban: '11.4',
+    name: Fit 1.4}
+  model: cars.car
+  pk: 26
+- fields: {alc_road: '8.6', alc_urban: '7.2', car_maker: 5, gas_road: '12.5', gas_urban: '10.5',
+    name: Fit 1.5}
+  model: cars.car
+  pk: 27
+- fields: {alc_road: '9.1', alc_urban: '7.5', car_maker: 5, gas_road: '13.9', gas_urban: '11',
+    name: City 1.5}
+  model: cars.car
+  pk: 28
+- fields: {alc_road: '9.7', alc_urban: '7.2', car_maker: 5, gas_road: '14.1', gas_urban: '10.2',
+    name: Civic 1.8}
+  model: cars.car
+  pk: 29
+- fields: {alc_road: '8.4', alc_urban: '6.5', car_maker: 6, gas_road: '12.7', gas_urban: '10.2',
+    name: 207 1.4}
+  model: cars.car
+  pk: 30
+- fields: {alc_road: '9.2', alc_urban: '8.6', car_maker: 7, gas_road: '14.5', gas_urban: '11.4',
+    name: Clio 1.0}
+  model: cars.car
+  pk: 31
+- fields: {alc_road: '8.8', alc_urban: '8', car_maker: 7, gas_road: '13', gas_urban: '12.1',
+    name: Sandero 1.0}
+  model: cars.car
+  pk: 32
+- fields: {alc_road: '8.8', alc_urban: '8', car_maker: 7, gas_road: '13', gas_urban: '12.1',
+    name: Logan 1.0}
+  model: cars.car
+  pk: 33
+- fields: {alc_road: '8.4', alc_urban: '7.5', car_maker: 7, gas_road: '12.8', gas_urban: '10.8',
+    name: Symbol 1.6}
+  model: cars.car
+  pk: 34
+- fields: {alc_road: '9.6', alc_urban: '7', car_maker: 8, gas_road: '13.5', gas_urban: '10.2',
+    name: Corolla 1.8}
+  model: cars.car
+  pk: 35
+- fields: {codename: add_logentry, content_type: 8, name: Can add log entry}
+  model: auth.permission
+  pk: 22
+- fields: {codename: change_logentry, content_type: 8, name: Can change log entry}
+  model: auth.permission
+  pk: 23
+- fields: {codename: delete_logentry, content_type: 8, name: Can delete log entry}
+  model: auth.permission
+  pk: 24
+- fields: {codename: add_group, content_type: 2, name: Can add group}
+  model: auth.permission
+  pk: 4
+- fields: {codename: change_group, content_type: 2, name: Can change group}
+  model: auth.permission
+  pk: 5
+- fields: {codename: delete_group, content_type: 2, name: Can delete group}
+  model: auth.permission
+  pk: 6
+- fields: {codename: add_message, content_type: 4, name: Can add message}
+  model: auth.permission
+  pk: 10
+- fields: {codename: change_message, content_type: 4, name: Can change message}
+  model: auth.permission
+  pk: 11
+- fields: {codename: delete_message, content_type: 4, name: Can delete message}
+  model: auth.permission
+  pk: 12
+- fields: {codename: add_permission, content_type: 1, name: Can add permission}
+  model: auth.permission
+  pk: 1
+- fields: {codename: change_permission, content_type: 1, name: Can change permission}
+  model: auth.permission
+  pk: 2
+- fields: {codename: delete_permission, content_type: 1, name: Can delete permission}
+  model: auth.permission
+  pk: 3
+- fields: {codename: add_user, content_type: 3, name: Can add user}
+  model: auth.permission
+  pk: 7
+- fields: {codename: change_user, content_type: 3, name: Can change user}
+  model: auth.permission
+  pk: 8
+- fields: {codename: delete_user, content_type: 3, name: Can delete user}
+  model: auth.permission
+  pk: 9
+- fields: {codename: add_car, content_type: 10, name: Can add car}
+  model: auth.permission
+  pk: 28
+- fields: {codename: change_car, content_type: 10, name: Can change car}
+  model: auth.permission
+  pk: 29
+- fields: {codename: delete_car, content_type: 10, name: Can delete car}
+  model: auth.permission
+  pk: 30
+- fields: {codename: add_carmaker, content_type: 9, name: Can add car maker}
+  model: auth.permission
+  pk: 25
+- fields: {codename: change_carmaker, content_type: 9, name: Can change car maker}
+  model: auth.permission
+  pk: 26
+- fields: {codename: delete_carmaker, content_type: 9, name: Can delete car maker}
+  model: auth.permission
+  pk: 27
+- fields: {codename: add_contenttype, content_type: 5, name: Can add content type}
+  model: auth.permission
+  pk: 13
+- fields: {codename: change_contenttype, content_type: 5, name: Can change content
+      type}
+  model: auth.permission
+  pk: 14
+- fields: {codename: delete_contenttype, content_type: 5, name: Can delete content
+      type}
+  model: auth.permission
+  pk: 15
+- fields: {codename: add_session, content_type: 6, name: Can add session}
+  model: auth.permission
+  pk: 16
+- fields: {codename: change_session, content_type: 6, name: Can change session}
+  model: auth.permission
+  pk: 17
+- fields: {codename: delete_session, content_type: 6, name: Can delete session}
+  model: auth.permission
+  pk: 18
+- fields: {codename: add_site, content_type: 7, name: Can add site}
+  model: auth.permission
+  pk: 19
+- fields: {codename: change_site, content_type: 7, name: Can change site}
+  model: auth.permission
+  pk: 20
+- fields: {codename: delete_site, content_type: 7, name: Can delete site}
+  model: auth.permission
+  pk: 21

@@ -44,7 +44,7 @@
 			<h3>Escolha o modelo exato do seu automóvel:</h3>
 		</div>
 	</div>
-
+	<form method="POST" action="/">
 	<div class="row">
 		<div class="threecol">
 		</div>
@@ -86,13 +86,13 @@
 		<div class="threecol last">
 		</div>
 	</div>
-
+ {% csrf_token %}
 	<div class="row">
 		<div class="twelvecol last">
 			<input type="submit" class="radius" value="Calcular" />
 		</div>
 	</div>
-
+	</form>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/libs/jquery-1.6.2.min.js"><\/script>')</script>
 </body><!--! end of #container -->
