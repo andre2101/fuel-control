@@ -21,6 +21,7 @@ def get_fuel(preco_alcool, preco_gasolina,
 	#results = rgx.findall(text)
 	
 	if text.count('X1 = 0'):
+		print 'X1=0'
 		rgx = re.compile('\\d+\\.\\d+')
 		results = rgx.findall(text)
 		return {
@@ -29,6 +30,7 @@ def get_fuel(preco_alcool, preco_gasolina,
 			'vol_gasolina':	Decimal(results[1]),}
 
 	elif text.count('X2 = 0'):
+		print 'X2=0'
 		rgx = re.compile('\\d+\\.\\d+')
 		results = rgx.findall(text)
 		return {
