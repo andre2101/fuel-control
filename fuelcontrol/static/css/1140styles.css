@@ -45,7 +45,7 @@
 		border-radius: 10px 10px 10px 10px;
 	}
 
-	h2, h3, label, td, p {
+	h2, h3, label, td, p, span {
 		text-shadow: 0 2px 6px #3B3B3B;
 	}
 
@@ -78,11 +78,17 @@
 		width: 100%;
 	}
 
+	span {
+		color: #FFFFFF;
+		font-size: 25px;
+		margin: 0 5% 0 0;
+	}
+
 	input[type="text"] {
 		border: 1px solid #CCCCCC;
 		margin: 0 0 50px;
 		font-size: 20px;
-		width: 90%; /*height: 50px;*/
+		width: 73%; /*height: 50px;*/
 		padding: 12px;
 	}
 
