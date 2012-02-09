@@ -73,7 +73,7 @@
 						<p>{{urbano.vol_alcool}} litros de álcool</p>
 					{% endif %}{% endif %}
 				</div>
-				<h3>Você economiza a cada 10KM:</h3>
+				<h3>Você economiza a cada 325KM:</h3>
 				<p class="price">R$ {{URBANO.econ_10k|floatformat:2}}</p>
 			</div>
 		</div>
@@ -102,16 +102,10 @@
 					{% else %}
 						<p>{{rodoviario.vol_gasolina}} litros de gasolina</p>
 						<p>{{rodoviario.vol_alcool}} litros de álcool</p>
-					{% endif %}{% endif %}			</div>
-
-<<<<<<< HEAD
-				<h3>Você economiza no mínimo</h3>
-				<p class="price">R$ 23,00</p>
-			</div>
-=======
-			<h3>Você economiza a cada 10KM:</h3>
+					{% endif %}{% endif %}			
+				</div>
+			<h3>Você economiza após 650KM:</h3>
 			<p class="price">R$ {{RODOVIARIO.econ_10k|floatformat:2}}</p>
->>>>>>> e2831939f883819a2b1f125c3b07c64bf1fa7344
 		</div>
 		<div class="twocol last"></div>
 	</div>
