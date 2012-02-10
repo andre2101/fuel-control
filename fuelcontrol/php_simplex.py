@@ -14,41 +14,52 @@ def get_fuel(preco_alcool, preco_gasolina,
 	browser.visit(URL % locals())
 	browser.click_link_by_partial_href('solucion2.php')
 	html = BeautifulSoup(browser.html)
-	text = html.findAll('p')[2].getText()
+	text = ""
 	
-	#rgx = re.compile('\\d+\\.*\\d*')
-	#rgx = re.compile('\\d+(?:\\.\\d*)*')
-	#results = rgx.findall(text)
+	try:
+		text = html.findAll('p')[2].getText()
+		
+		
+		#rgx = re.compile('\\d+\\.*\\d*')
+		#rgx = re.compile('\\d+(?:\\.\\d*)*')
+		#results = rgx.findall(text)
+		
+		if text.count('X1 = 0'):
+			print 'X1=0'
+			#rgx = re.compile('\\d+\\.\\d+')
+			rgx = re.compile('\\d+\\.*\\d*')
 	
-	if text.count('X1 = 0'):
-		print 'X1=0'
-		#rgx = re.compile('\\d+\\.\\d+')
-		rgx = re.compile('\\d+\\.*\\d*')
-
-		results = rgx.findall(text)
+			results = rgx.findall(text)
+			return {
+				'custo_total': 	Decimal(results[0]),
+				'vol_alcool': 	0,
+				'vol_gasolina':	Decimal(results[1]),}
+	
+		elif text.count('X2 = 0'):
+			print 'X2=0'
+			rgx = re.compile('\\d+\\.\\d+')
+			results = rgx.findall(text)
+			return {
+				'custo_total': 	Decimal(results[0]),
+				'vol_alcool': 	Decimal(results[1]),
+				'vol_gasolina':	0}
+	
+		else:
+			rgx = re.compile('\\d+\\.\\d+')
+			results = rgx.findall(text)
+			return {
+				'custo_total': 	Decimal(results[0]),
+				'vol_alcool': 	Decimal(results[1]),
+				'vol_gasolina':	Decimal(results[2]),}		
+	except IndexError:
+		vol_alcool = 0
+		vol_gasolina = kilometragem / consumo_gasolina
+		custo_total = vol_gasolina * Decimal(preco_gasolina)
+		print "fuuuu" 
 		return {
-			'custo_total': 	Decimal(results[0]),
-			'vol_alcool': 	0,
-			'vol_gasolina':	Decimal(results[1]),}
-
-	elif text.count('X2 = 0'):
-		print 'X2=0'
-		rgx = re.compile('\\d+\\.\\d+')
-		results = rgx.findall(text)
-		return {
-			'custo_total': 	Decimal(results[0]),
-			'vol_alcool': 	Decimal(results[1]),
-			'vol_gasolina':	0}
-
-	else:
-		rgx = re.compile('\\d+\\.\\d+')
-		results = rgx.findall(text)
-		return {
-			'custo_total': 	Decimal(results[0]),
-			'vol_alcool': 	Decimal(results[1]),
-			'vol_gasolina':	Decimal(results[2]),}
-
-
+				'custo_total': 	Decimal(custo_total),
+				'vol_alcool': 	Decimal(vol_alcool),
+				'vol_gasolina':	Decimal(vol_gasolina),}		
 
 
 
