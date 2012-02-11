@@ -62,16 +62,17 @@
 
 				<div class="cost-benefit">
 					<h3>Melhor custo-benefício</h3>
-					
+					<p id="beneficio-urbano">
 					{% if urbano.vol_gasolina == 0 %}
-						<p>Somente álcool</p>
+						Somente álcool
 					
 					{% else %}{% if urbano.vol_alcool == 0 %}
-						<p>Somente Gasolina</p>
+						Somente Gasolina
 					{% else %}
-						<p>{{urbano.vol_gasolina}} litros de gasolina</p>
-						<p>{{urbano.vol_alcool}} litros de álcool</p>
+						{{urbano.vol_gasolina|floatformat:2}} litros de gasolina <br />
+						{{urbano.vol_alcool|floatformat:2}} litros de álcool
 					{% endif %}{% endif %}
+				</p>
 				</div>
 				<h3>Você economiza a cada 325KM:</h3>
 				<p class="price">R$ {{URBANO.econ_10k|floatformat:2}}</p>
@@ -94,15 +95,17 @@
 
 				<div class="cost-benefit">
 					<h3>Melhor custo-benefício</h3>
+					<p id="beneficio-rodoviario">
 					{% if rodoviario.vol_gasolina == 0 %}
-						<p>Somente álcool</p>
+						Somente álcool
 					
 					{% else %}{% if rodoviario.vol_alcool == 0 %}
-						<p>Somente Gasolina</p>
+						Somente Gasolina
 					{% else %}
-						<p>{{rodoviario.vol_gasolina}} litros de gasolina</p>
-						<p>{{rodoviario.vol_alcool}} litros de álcool</p>
+						{{rodoviario.vol_gasolina|floatformat:2}} litros de gasolina <br/>
+						{{rodoviario.vol_alcool|floatformat:2}} litros de álcool
 					{% endif %}{% endif %}			
+				</p>
 				</div>
 			<h3>Você economiza após 650KM:</h3>
 			<p class="price">R$ {{RODOVIARIO.econ_10k|floatformat:2}}</p>
